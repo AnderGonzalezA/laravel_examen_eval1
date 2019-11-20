@@ -14,12 +14,12 @@ class CreateShops extends Migration
     public function up()
     {
         Schema::create('shops', function (Blueprint $table) {
-            $table->bigInteger('id');
+            $table->bigIncrements('id');
             $table->string('name',20);
-            $table->string('descripcion');
+            $table->string('description');
             $table->string('password',255);
             $table->string('email',50);
-            $table->integer('likes',11);
+            $table->integer('likes');
             $table->timestamps();
         });
     }
